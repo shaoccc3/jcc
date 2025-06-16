@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rebirth Cities - Rebirth Cities. Rewrite Identity.</title>
-    <!-- Tailwind CSS Core -->
+    <title>Rebirth Cities - 重塑城市，改寫認同</title>
+    <!-- Tailwind CSS 核心 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icon Library -->
+    <!-- Font Awesome 圖標庫 -->
     <link
       href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <!-- Google Fonts -->
+    <!-- Google Fonts 字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Tailwind Config -->
+    <!-- Tailwind 配置 -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: "#6366F1", // Indigo, for innovation and trust
-              secondary: "#F97316", // Orange, for vitality and regeneration
-              dark: "#0F172A", // Dark blue background
-              light: "#F8FAFC", // Light text
-              accent: "#EC4899", // Accent color
-              neutral: "#334155", // Neutral color
+              primary: "#6366F1", // 靛藍色，代表創新與信任
+              secondary: "#F97316", // 橙色，代表活力與再生
+              dark: "#0F172A", // 深藍色背景
+              light: "#F8FAFC", // 淺色文本
+              accent: "#EC4899", // 強調色
+              neutral: "#334155", // 中性色
             },
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
+              // 使用 'Noto Sans TC' 作為中文字體，'Montserrat' 作為英文字體
+              sans: ["Inter", "Noto Sans TC", "sans-serif"],
               montserrat: ["Montserrat", "sans-serif"],
             },
             animation: {
@@ -60,7 +61,7 @@
       };
     </script>
 
-    <!-- Custom Styles -->
+    <!-- 自定義樣式 -->
     <style type="text/tailwindcss">
       @layer utilities {
         .text-gradient {
@@ -107,13 +108,24 @@
           transition: width 0.2s;
         }
       }
+      body {
+        font-family: "Inter", "Noto Sans TC", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", "Noto Sans TC", sans-serif;
+      }
     </style>
   </head>
   <body class="font-sans bg-dark text-light overflow-x-hidden">
-    <!-- Page Progress Bar -->
+    <!-- 頁面進度條 -->
     <div class="progress-bar"></div>
 
-    <!-- Navigation Bar -->
+    <!-- 導航欄 -->
     <header
       id="navbar"
       class="fixed w-full top-0 z-50 transition-all duration-300 bg-glass border-b border-white/10"
@@ -122,6 +134,7 @@
         <div class="flex justify-between items-center h-20">
           <div class="flex items-center">
             <a href="#" class="flex items-center space-x-3">
+              <!-- 將圖標換成一個更具體的建築或再生相關圖標 -->
               <span class="text-secondary text-2xl"
                 ><i class="fa fa-building-o"></i
               ></span>
@@ -131,31 +144,31 @@
             </a>
           </div>
 
-          <!-- Desktop Navigation -->
+          <!-- 桌面版導航 -->
           <nav class="hidden md:flex items-center space-x-8">
             <a
               href="#mission"
               class="text-light/80 hover:text-secondary transition-colors"
-              >Our Mission</a
+              >核心使命</a
             >
             <a
               href="#projects"
               class="text-light/80 hover:text-secondary transition-colors"
-              >Projects</a
+              >精選專案</a
             >
             <a
               href="#team"
               class="text-light/80 hover:text-secondary transition-colors"
-              >Our Team</a
+              >關於團隊</a
             >
             <a
               href="#apply"
               class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
-              >Apply Now</a
+              >申請合作</a
             >
           </nav>
 
-          <!-- Mobile Menu Button -->
+          <!-- 手機版菜單按鈕 -->
           <button
             id="menu-toggle"
             class="md:hidden text-light focus:outline-none"
@@ -165,7 +178,7 @@
         </div>
       </div>
 
-      <!-- Mobile Navigation Menu -->
+      <!-- 手機版導航菜單 -->
       <div
         id="mobile-menu"
         class="md:hidden hidden bg-dark/95 backdrop-blur-md"
@@ -174,34 +187,35 @@
           <a
             href="#mission"
             class="text-light/80 hover:text-secondary transition-colors py-2"
-            >Our Mission</a
+            >核心使命</a
           >
           <a
             href="#projects"
             class="text-light/80 hover:text-secondary transition-colors py-2"
-            >Projects</a
+            >精選專案</a
           >
           <a
             href="#team"
             class="text-light/80 hover:text-secondary transition-colors py-2"
-            >Our Team</a
+            >關於團隊</a
           >
           <a
             href="#apply"
             class="bg-primary hover:bg-primary/90 text-white mt-2 px-5 py-3 rounded-full text-center transition-all"
-            >Apply Now</a
+            >申請合作</a
           >
         </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- 主體內容 -->
     <main>
-      <!-- Hero Section -->
+      <!-- 英雄區域 -->
       <section
         class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-20"
       >
         <div class="absolute inset-0 z-0">
+          <!-- 使用一張更具城市與自然融合感的背景圖 -->
           <div
             class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1542379363-356391494572?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-10"
           ></div>
@@ -216,42 +230,41 @@
               <h1
                 class="font-montserrat font-extrabold text-[clamp(2.5rem,7vw,4.5rem)] leading-tight"
               >
-                Rebirth Cities.<br />
-                <span class="text-gradient">Rewrite Identity.</span>
+                重塑城市。<br />
+                <span class="text-gradient">改寫認同。</span>
               </h1>
               <p class="text-lg md:text-xl text-light/80 max-w-lg">
-                We bring new life to urban regeneration through innovative
-                models driven by AI, culture, and community.
+                透過 AI、文化與社群驅動的創新模式，我們賦予都市再生新的生命力。
               </p>
               <div class="flex flex-wrap gap-4">
                 <a
                   href="#apply"
                   class="bg-secondary hover:bg-secondary/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all transform hover:scale-105 shadow-lg shadow-secondary/20"
                 >
-                  Start Your Journey
+                  開啟您的旅程
                 </a>
                 <a
                   href="#projects"
                   class="bg-transparent border-2 border-light/30 hover:border-secondary text-light hover:text-secondary px-8 py-3 rounded-full text-lg font-medium transition-all"
                 >
-                  View Case Studies
+                  查看成功案例
                 </a>
               </div>
               <div class="flex items-center space-x-4 pt-4">
                 <div class="flex -space-x-2">
                   <img
                     src="https://i.pravatar.cc/40?img=1"
-                    alt="Collaborator 1"
+                    alt="協作者頭像1"
                     class="w-10 h-10 rounded-full border-2 border-dark object-cover"
                   />
                   <img
                     src="https://i.pravatar.cc/40?img=2"
-                    alt="Collaborator 2"
+                    alt="協作者頭像2"
                     class="w-10 h-10 rounded-full border-2 border-dark object-cover"
                   />
                   <img
                     src="https://i.pravatar.cc/40?img=3"
-                    alt="Collaborator 3"
+                    alt="協作者頭像3"
                     class="w-10 h-10 rounded-full border-2 border-dark object-cover"
                   />
                   <div
@@ -260,9 +273,7 @@
                     +2k
                   </div>
                 </div>
-                <p class="text-light/70">
-                  Join our network of over 2,000 cities
-                </p>
+                <p class="text-light/70">加入我們超過 2,000 個城市的合作網絡</p>
               </div>
             </div>
 
@@ -272,7 +283,7 @@
               >
                 <img
                   src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2670&auto=format&fit=crop"
-                  alt="Urban Regeneration"
+                  alt="都市再生示意圖"
                   class="rounded-xl w-full h-auto object-cover"
                 />
                 <div
@@ -286,9 +297,7 @@
                     </div>
                     <div>
                       <p class="font-montserrat font-semibold">Phoenix.AI</p>
-                      <p class="text-sm text-light/60">
-                        AI-driven urban planning
-                      </p>
+                      <p class="text-sm text-light/60">AI 驅動的都市規劃</p>
                     </div>
                   </div>
                 </div>
@@ -306,7 +315,7 @@
         <a
           href="#projects"
           class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-          aria-label="Scroll down"
+          aria-label="向下滾動"
         >
           <i
             class="fa fa-chevron-down text-2xl text-light/70 hover:text-secondary transition-colors"
@@ -314,140 +323,134 @@
         </a>
       </section>
 
-      <!-- Projects Showcase -->
+      <!-- 專案亮點 -->
       <section
         id="projects"
         class="section-padding bg-gradient-to-b from-dark to-[#1E293B]"
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-secondary font-medium">Our Projects</span>
+            <span class="text-secondary font-medium">我們的專案</span>
             <h2
               class="font-montserrat font-bold text-[clamp(2rem,5vw,3.5rem)] mt-2 mb-6"
             >
-              Urban Regeneration Stories
+              都市再生故事
             </h2>
             <p class="text-light/70 text-lg">
-              Explore how we transform cities with innovative projects at the
-              intersection of culture, technology, and community.
+              探索我們如何在文化、科技與社群的交匯點上，透過創新專案改造城市。
             </p>
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project Card 1 -->
+            <!-- 專案卡片 1 (已修復圖片) -->
             <div
               class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover"
             >
               <div class="h-56 overflow-hidden">
                 <img
-                  src="https://placehold.co/600x400/7c6f64/FFFFFF?text=Historic+District"
-                  alt="Heritage District Revival"
+                  src="https://placehold.co/600x400/7c6f64/FFFFFF?text=歷史街區"
+                  alt="文化遺產區域復興"
                   class="w-full h-full object-cover transition-transform hover:scale-110 duration-500"
                 />
               </div>
               <div class="p-6">
                 <span
                   class="text-xs text-secondary font-medium bg-secondary/10 px-3 py-1 rounded-full"
-                  >Cultural Heritage</span
+                  >文化遺產</span
                 >
                 <h3 class="font-montserrat font-bold text-xl mt-4 mb-2">
-                  Heritage District Revival
+                  文化遺產區域復興
                 </h3>
                 <p class="text-light/70 mb-4 h-24">
-                  Breathing new life into historical areas with smart
-                  restoration techniques while preserving unique cultural
-                  identity.
+                  透過智慧修復技術，為歷史街區注入新生命，同時保留其獨特的文化認同。
                 </p>
                 <div
                   class="flex justify-between items-center border-t border-white/10 pt-4"
                 >
                   <span class="text-sm text-light/60"
-                    ><i class="fa fa-eye mr-1"></i> 3.1M Views</span
+                    ><i class="fa fa-eye mr-1"></i> 3.1M 瀏覽</span
                   >
                   <a
                     href="#"
                     class="text-primary hover:text-primary/80 font-medium flex items-center"
                   >
-                    View Story <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                    查看故事 <i class="fa fa-arrow-right ml-2 text-sm"></i>
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Project Card 2 -->
+            <!-- 專案卡片 2 (已修復圖片) -->
             <div
               class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover"
             >
               <div class="h-56 overflow-hidden">
                 <img
-                  src="https://placehold.co/600x400/3b5998/FFFFFF?text=Smart+Port"
-                  alt="Smart Port Regeneration"
+                  src="https://placehold.co/600x400/3b5998/FFFFFF?text=智慧港口"
+                  alt="智慧港口再生"
                   class="w-full h-full object-cover transition-transform hover:scale-110 duration-500"
                 />
               </div>
               <div class="p-6">
                 <span
                   class="text-xs text-primary font-medium bg-primary/10 px-3 py-1 rounded-full"
-                  >Smart Infrastructure</span
+                  >智慧基礎設施</span
                 >
                 <h3 class="font-montserrat font-bold text-xl mt-4 mb-2">
-                  Smart Port Regeneration
+                  智慧港口再生
                 </h3>
                 <p class="text-light/70 mb-4 h-24">
-                  Transforming traditional ports into intelligent, sustainable
-                  hubs for commerce and community interaction.
+                  將傳統港口轉型為集商業、社群互動於一體的智慧、永續中心。
                 </p>
                 <div
                   class="flex justify-between items-center border-t border-white/10 pt-4"
                 >
                   <span class="text-sm text-light/60"
-                    ><i class="fa fa-leaf mr-1"></i> 25% Carbon Reduction</span
+                    ><i class="fa fa-leaf mr-1"></i> 減少 25% 碳排</span
                   >
                   <a
                     href="#"
                     class="text-primary hover:text-primary/80 font-medium flex items-center"
                   >
-                    View Story <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                    查看故事 <i class="fa fa-arrow-right ml-2 text-sm"></i>
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Project Card 3 -->
+            <!-- 專案卡片 3 (已修復圖片) -->
             <div
               class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover"
             >
               <div class="h-56 overflow-hidden">
                 <img
-                  src="https://placehold.co/600x400/e94560/FFFFFF?text=Creative+Cluster"
-                  alt="Cultural Quarter Reborn"
+                  src="https://placehold.co/600x400/e94560/FFFFFF?text=文創聚落"
+                  alt="文創聚落重生"
                   class="w-full h-full object-cover transition-transform hover:scale-110 duration-500"
                 />
               </div>
               <div class="p-6">
                 <span
                   class="text-xs text-accent font-medium bg-accent/10 px-3 py-1 rounded-full"
-                  >Cultural Innovation</span
+                  >文化創新</span
                 >
                 <h3 class="font-montserrat font-bold text-xl mt-4 mb-2">
-                  Cultural Quarter Reborn
+                  文創聚落重生
                 </h3>
                 <p class="text-light/70 mb-4 h-24">
-                  Revitalizing artistic districts with modern amenities while
-                  maintaining their original creative and cultural essence.
+                  為藝術街區注入現代化設施，在提升生活品質的同時，保留其原有的創作與文化精髓。
                 </p>
                 <div
                   class="flex justify-between items-center border-t border-white/10 pt-4"
                 >
                   <span class="text-sm text-light/60"
-                    ><i class="fa fa-users mr-1"></i> 1.8M Community
-                    Engaged</span
+                    ><i class="fa fa-users mr-1"></i> 1.8M 社群參與</span
                   >
                   <a
                     href="#"
                     class="text-primary hover:text-primary/80 font-medium flex items-center"
                   >
-                    View Story <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                    查看故事 <i class="fa fa-arrow-right ml-2 text-sm"></i>
                   </a>
                 </div>
               </div>
@@ -459,13 +462,13 @@
               href="#"
               class="inline-flex items-center justify-center px-8 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all"
             >
-              View All Projects <i class="fa fa-arrow-right ml-2"></i>
+              查看所有專案 <i class="fa fa-arrow-right ml-2"></i>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- Our Mission -->
+      <!-- 我們的使命 -->
       <section
         id="mission"
         class="section-padding bg-dark relative overflow-hidden"
@@ -480,11 +483,11 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <span class="text-secondary font-medium">Our Mission</span>
+              <span class="text-secondary font-medium">我們的使命</span>
               <h2
                 class="font-montserrat font-bold text-[clamp(2rem,5vw,3.5rem)] mt-2 mb-6"
               >
-                Reimagining Urban Spaces Through Technology and Culture
+                透過科技與文化重塑都市空間
               </h2>
 
               <div class="space-y-8">
@@ -496,12 +499,10 @@
                   </div>
                   <div>
                     <h3 class="font-montserrat font-bold text-xl mb-2">
-                      Cultural Heritage Preservation
+                      文化遺產保護
                     </h3>
                     <p class="text-light/70">
-                      We believe a city's identity is rooted in its culture. Our
-                      projects focus on preserving and revitalizing heritage
-                      while integrating modern functionality.
+                      我們相信，城市的認同根植於其文化。我們的專案專注於在整合現代功能的同時，保存並活化文化遺產。
                     </p>
                   </div>
                 </div>
@@ -513,12 +514,11 @@
                   </div>
                   <div>
                     <h3 class="font-montserrat font-bold text-xl mb-2">
-                      Technological Innovation
+                      前瞻技術創新
                     </h3>
                     <p class="text-light/70">
-                      Leveraging cutting-edge technologies like AI, IoT, and
-                      data analytics to create smarter, more sustainable urban
-                      environments that respond to community needs.
+                      利用
+                      AI、物聯網和數據分析等尖端技術，創造更智慧、更永續，並能回應社群需求的都市環境。
                     </p>
                   </div>
                 </div>
@@ -530,12 +530,10 @@
                   </div>
                   <div>
                     <h3 class="font-montserrat font-bold text-xl mb-2">
-                      Community-Driven Design
+                      社群驅動設計
                     </h3>
                     <p class="text-light/70">
-                      True urban regeneration happens with active community
-                      involvement. We facilitate inclusive processes that
-                      empower local residents to shape their own neighborhoods.
+                      真正的都市再生來自於社群的積極參與。我們推動包容性流程，賦予在地居民塑造自己家園的權力。
                     </p>
                   </div>
                 </div>
@@ -548,7 +546,7 @@
               >
                 <img
                   src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?q=80&w=2574&auto=format&fit=crop"
-                  alt="Urban regeneration process"
+                  alt="都市再生過程示意圖"
                   class="w-full h-auto object-cover"
                 />
               </div>
@@ -561,7 +559,7 @@
                   >
                     120+
                   </div>
-                  <div class="text-sm text-light/60">Cities Transformed</div>
+                  <div class="text-sm text-light/60">改造城市</div>
                 </div>
                 <div class="text-center">
                   <div
@@ -569,7 +567,7 @@
                   >
                     5.4M
                   </div>
-                  <div class="text-sm text-light/60">Lives Impacted</div>
+                  <div class="text-sm text-light/60">影響生命</div>
                 </div>
               </div>
             </div>
@@ -577,7 +575,7 @@
         </div>
       </section>
 
-      <!-- Apply Now -->
+      <!-- 申請合作 -->
       <section id="apply" class="section-padding bg-dark">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div
@@ -585,15 +583,14 @@
           >
             <div class="grid md:grid-cols-2">
               <div class="p-8 md:p-12">
-                <span class="text-secondary font-medium">Join Us</span>
+                <span class="text-secondary font-medium">加入我們</span>
                 <h2
                   class="font-montserrat font-bold text-[clamp(1.8rem,4vw,2.5rem)] mt-2 mb-6"
                 >
-                  Apply for the Urban Regeneration Program
+                  申請都市再生計畫
                 </h2>
                 <p class="text-light/70 mb-8">
-                  Ready to transform your city? Apply now and bring innovative
-                  solutions to your community.
+                  準備好改變您的城市了嗎？立即申請，將創新解決方案帶入您的社群。
                 </p>
 
                 <form action="#" method="POST" class="space-y-6">
@@ -601,14 +598,14 @@
                     <label
                       for="name"
                       class="block text-sm font-medium text-light/80 mb-2"
-                      >Full Name</label
+                      >您的全名</label
                     >
                     <input
                       type="text"
                       id="name"
                       name="name"
                       class="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                      placeholder="Enter your name"
+                      placeholder="請輸入您的姓名"
                       required
                     />
                   </div>
@@ -617,14 +614,14 @@
                     <label
                       for="email"
                       class="block text-sm font-medium text-light/80 mb-2"
-                      >Email Address</label
+                      >電子郵件</label
                     >
                     <input
                       type="email"
                       id="email"
                       name="email"
                       class="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                      placeholder="Enter your email"
+                      placeholder="請輸入您的電子郵件"
                       required
                     />
                   </div>
@@ -633,14 +630,14 @@
                     <label
                       for="city"
                       class="block text-sm font-medium text-light/80 mb-2"
-                      >City / Region</label
+                      >城市/地區</label
                     >
                     <input
                       type="text"
                       id="city"
                       name="city"
                       class="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                      placeholder="Enter your city"
+                      placeholder="請輸入您所在的城市"
                     />
                   </div>
 
@@ -648,7 +645,7 @@
                     type="submit"
                     class="w-full bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-[1.02] shadow-lg shadow-secondary/20"
                   >
-                    Submit Application
+                    提交申請
                   </button>
                 </form>
               </div>
@@ -657,7 +654,7 @@
                 class="bg-primary/10 p-8 md:p-12 flex flex-col justify-center"
               >
                 <h3 class="font-montserrat font-bold text-2xl mb-6">
-                  Program Benefits
+                  計畫效益
                 </h3>
                 <div class="space-y-6">
                   <div class="flex space-x-4">
@@ -668,11 +665,10 @@
                     </div>
                     <div>
                       <h4 class="font-montserrat font-semibold text-lg">
-                        Expert Guidance
+                        專家指導
                       </h4>
                       <p class="text-light/70 text-sm">
-                        Access to our team of urban planning, technology, and
-                        cultural heritage experts.
+                        獲得我們都市規劃、技術和文化遺產專家的支持。
                       </p>
                     </div>
                   </div>
@@ -684,11 +680,10 @@
                     </div>
                     <div>
                       <h4 class="font-montserrat font-semibold text-lg">
-                        Funding Opportunities
+                        資金機會
                       </h4>
                       <p class="text-light/70 text-sm">
-                        Potential access to grants and funding for approved
-                        projects.
+                        有機會獲得核准專案的補助與資金支持。
                       </p>
                     </div>
                   </div>
@@ -700,11 +695,10 @@
                     </div>
                     <div>
                       <h4 class="font-montserrat font-semibold text-lg">
-                        Networking
+                        網絡串連
                       </h4>
                       <p class="text-light/70 text-sm">
-                        Join a community of cities and professionals dedicated
-                        to solving urban challenges.
+                        加入致力於解決都市挑戰的城市與專業人士社群。
                       </p>
                     </div>
                   </div>
@@ -716,7 +710,7 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- 頁腳 -->
     <footer class="bg-[#1E293B] border-t border-white/10">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -730,8 +724,7 @@
               >
             </a>
             <p class="text-light/70">
-              Transforming urban spaces through technology, culture, and
-              community engagement.
+              透過科技、文化與社群參與，改造都市空間。
             </p>
             <div class="flex space-x-4 mt-6">
               <a
@@ -753,65 +746,61 @@
           </div>
 
           <div>
-            <h4 class="font-montserrat font-semibold text-lg mb-4">
-              Quick Links
-            </h4>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">快速連結</h4>
             <ul class="space-y-3">
               <li>
                 <a
                   href="#mission"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Our Mission</a
+                  >核心使命</a
                 >
               </li>
               <li>
                 <a
                   href="#projects"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Projects</a
+                  >精選專案</a
                 >
               </li>
               <li>
                 <a
                   href="#team"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Our Team</a
+                  >關於團隊</a
                 >
               </li>
               <li>
                 <a
                   href="#apply"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Apply Now</a
+                  >申請合作</a
                 >
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-montserrat font-semibold text-lg mb-4">
-              Resources
-            </h4>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">資源</h4>
             <ul class="space-y-3">
               <li>
                 <a
                   href="#"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Case Studies</a
+                  >案例研究</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >Research Papers</a
+                  >研究論文</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="text-light/70 hover:text-secondary transition-colors"
-                  >FAQs</a
+                  >常見問題</a
                 >
               </li>
             </ul>
@@ -819,22 +808,20 @@
 
           <div>
             <h4 class="font-montserrat font-semibold text-lg mb-4">
-              Newsletter
+              訂閱電子報
             </h4>
-            <p class="text-light/70 mb-4">
-              Get the latest updates and trends on urban regeneration projects.
-            </p>
+            <p class="text-light/70 mb-4">獲取都市再生專案的最新動態與趨勢。</p>
             <form class="flex">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="您的電子郵件"
                 class="w-full px-4 py-2 bg-dark/50 border border-white/10 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary/50 transition-all"
               />
               <button
                 type="submit"
                 class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-lg font-medium transition-all"
               >
-                Subscribe
+                訂閱
               </button>
             </form>
           </div>
@@ -848,10 +835,10 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript 腳本 -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Navbar scroll effect
+        // 導航欄滾動效果
         const navbar = document.getElementById("navbar");
         window.addEventListener("scroll", function () {
           if (window.scrollY > 50) {
@@ -861,7 +848,7 @@
           }
         });
 
-        // Page scroll progress bar
+        // 頁面滾動進度條
         const progressBar = document.querySelector(".progress-bar");
         window.addEventListener("scroll", () => {
           const scrolled =
@@ -871,14 +858,14 @@
           progressBar.style.width = scrolled + "%";
         });
 
-        // Mobile menu toggle
+        // 手機版菜單切換
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
         menuToggle.addEventListener("click", function () {
           mobileMenu.classList.toggle("hidden");
         });
 
-        // Smooth scroll and close mobile menu
+        // 平滑滾動與關閉手機菜單
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -887,10 +874,12 @@
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
+              // 關閉手機菜單
               if (!mobileMenu.classList.contains("hidden")) {
                 mobileMenu.classList.add("hidden");
               }
 
+              // 計算滾動位置 (減去導航欄高度)
               const offsetTop = targetElement.offsetTop - navbar.offsetHeight;
 
               window.scrollTo({
@@ -901,7 +890,7 @@
           });
         });
 
-        // Scroll-triggered animations
+        // 滾動觸發動畫
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -920,7 +909,7 @@
             ".card-hover, .section-padding h2, .section-padding p"
           )
           .forEach((el) => {
-            el.style.opacity = 0; // Set initial opacity to 0
+            el.style.opacity = 0; // 初始設置為透明
             observer.observe(el);
           });
       });
