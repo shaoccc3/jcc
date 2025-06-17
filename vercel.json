@@ -1,4 +1,14 @@
 {
   "version": 2,
-  "routes": [{ "src": "/(.*)", "dest": "/public/$1" }]
+  "routes": [
+    { "src": "/(.*)", "dest": "/public/$1" },
+    {
+      "source": "/projects",
+      "destination": "/page/projects.html"
+    },
+    {
+      "source": "/resource",
+      "destination": "/page/resource.html"
+    }
+  ]
 }
