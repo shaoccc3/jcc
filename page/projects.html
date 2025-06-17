@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies - Rebirth Cities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366F1",
+              secondary: "#F97316",
+              dark: "#0F172A",
+              light: "#F8FAFC",
+              accent: "#EC4899",
+              neutral: "#334155",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              montserrat: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-glass {
+          background: rgba(15, 23, 42, 0.8);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+        .card-hover {
+          transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-padding {
+          padding: clamp(4rem, 10vw, 8rem) 1rem;
+        }
+        .hero-gradient {
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .stats-card {
+          @apply bg-dark/30 border border-white/10 rounded-xl p-6 text-center;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-dark text-light overflow-x-hidden">
+    <header
+      id="navbar"
+      class="sticky w-full top-0 z-50 transition-all duration-300 bg-glass border-b border-white/10"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3"
+              ><span class="text-secondary text-2xl"
+                ><i class="fa fa-building-o"></i></span
+              ><span class="font-montserrat font-bold text-xl md:text-2xl"
+                >Rebirth Cities</span
+              ></a
+            >
+          </div>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html#mission"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Our Mission</a
+            >
+            <a
+              href="index.html#projects"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Projects</a
+            >
+            <a
+              href="projects.html"
+              class="text-secondary transition-colors font-semibold"
+              >Case Studies</a
+            >
+            <a
+              href="resource.html"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Resources</a
+            >
+            <a
+              href="index.html#apply"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Apply Now</a
+            >
+          </nav>
+          <button
+            id="menu-toggle"
+            class="md:hidden text-light focus:outline-none"
+          >
+            <i class="fa fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-dark/95 backdrop-blur-md"
+      >
+        <nav class="flex flex-col px-4 pt-2 pb-4 space-y-2">
+          <a
+            href="index.html#mission"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Our Mission</a
+          >
+          <a
+            href="index.html#projects"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Projects</a
+          >
+          <a
+            href="projects.html"
+            class="text-secondary transition-colors font-semibold py-2"
+            >Case Studies</a
+          >
+          <a
+            href="resource.html"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Resources</a
+          >
+          <a
+            href="index.html#apply"
+            class="bg-primary hover:bg-primary/90 text-white mt-2 px-5 py-3 rounded-full text-center transition-all"
+            >Apply Now</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-gradient pt-32 pb-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="inline-block text-secondary font-medium mb-4"
+            >Case Studies</span
+          >
+          <h1
+            class="font-montserrat font-bold text-white text-[clamp(2.5rem,6vw,4rem)] leading-tight mb-6"
+          >
+            Real Estate Finance Projects
+          </h1>
+          <p class="text-light/80 text-xl mb-10 max-w-3xl mx-auto">
+            Explore our portfolio of successful real estate finance projects
+            that have transformed urban landscapes and delivered sustainable
+            returns.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section-padding bg-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-secondary font-medium">Spotlight</span>
+            <h2
+              class="font-montserrat font-bold text-[clamp(2rem,5vw,3rem)] mt-2 mb-6"
+            >
+              Featured Case Studies
+            </h2>
+          </div>
+          <div class="space-y-12">
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover"
+            >
+              <div class="grid md:grid-cols-2">
+                <img
+                  src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/108630/shutterstock_1011269995.jpg_1140x855.jpg"
+                  alt="Metropolitan Tower Redevelopment"
+                  class="w-full h-full object-cover"
+                />
+                <div class="p-8">
+                  <span
+                    class="text-xs text-primary font-medium bg-primary/10 px-3 py-1 rounded-full"
+                    >Mixed-Use Development</span
+                  >
+                  <h3 class="font-montserrat font-bold text-2xl mt-4 mb-3">
+                    Metropolitan Tower Redevelopment
+                  </h3>
+                  <p class="text-light/70 mb-6">
+                    A comprehensive redevelopment of a 45-story office tower
+                    into a mixed-use complex featuring luxury apartments, retail
+                    spaces, and a rooftop garden.
+                  </p>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-sm text-light/60">Total Investment</p>
+                      <p class="text-xl font-bold">$320M</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">Project Size</p>
+                      <p class="text-xl font-bold">650,000 sq ft</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">
+                        Return on Investment (ROI)
+                      </p>
+                      <p class="text-xl font-bold text-secondary">22%</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">Financing Type</p>
+                      <p class="text-xl font-bold">Mezzanine Debt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover"
+            >
+              <div class="grid md:grid-cols-2">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/2324/0401/files/exterior-of-globe-wharf-london-warehouse-conversion-apartment-for-sale-photography-by-debbie-bragg.jpg?v=1520183741"
+                  alt="Riverfront Warehouse Conversion"
+                  class="w-full h-full object-cover"
+                />
+                <div class="p-8">
+                  <span
+                    class="text-xs text-secondary font-medium bg-secondary/10 px-3 py-1 rounded-full"
+                    >Adaptive Reuse</span
+                  >
+                  <h3 class="font-montserrat font-bold text-2xl mt-4 mb-3">
+                    Riverfront Warehouse Conversion
+                  </h3>
+                  <p class="text-light/70 mb-6">
+                    Transformation of a historic industrial warehouse into 120
+                    luxury apartment units, preserving its original
+                    architectural elements.
+                  </p>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-sm text-light/60">Total Investment</p>
+                      <p class="text-xl font-bold">$185M</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">Project Size</p>
+                      <p class="text-xl font-bold">320,000 sq ft</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">
+                        Return on Investment (ROI)
+                      </p>
+                      <p class="text-xl font-bold text-secondary">19%</p>
+                    </div>
+                    <div>
+                      <p class="text-sm text-light/60">Financing Type</p>
+                      <p class="text-xl font-bold">Bridge Loan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="performance"
+        class="section-padding bg-gradient-to-b from-dark to-[#1E293B]"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-primary font-medium">Performance</span>
+            <h2
+              class="font-montserrat font-bold text-[clamp(2rem,5vw,3rem)] mt-2 mb-6"
+            >
+              Investment Portfolio Performance
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-dark/50 border border-white/10 rounded-xl p-6">
+              <h3 class="font-montserrat font-bold text-2xl mb-6">
+                Historical ROI by Asset Class
+              </h3>
+              <div class="relative h-96">
+                <canvas id="roiChart"></canvas>
+              </div>
+            </div>
+            <div class="bg-dark/50 border border-white/10 rounded-xl p-6">
+              <h3 class="font-montserrat font-bold text-2xl mb-6">
+                Portfolio Distribution
+              </h3>
+              <div class="relative h-96">
+                <canvas id="portfolioChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1E293B] border-t border-white/10 py-12">
+      <div class="container mx-auto px-4 text-center text-light/60 text-sm">
+        <p>&copy; 2025 Rebirth Cities. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", () =>
+          document.getElementById("mobile-menu").classList.toggle("hidden")
+        );
+      document.addEventListener("DOMContentLoaded", () => {
+        Chart.defaults.color = "rgba(248, 250, 252, 0.7)";
+        Chart.defaults.borderColor = "rgba(51, 65, 85, 0.5)";
+
+        // ROI Chart (Bar)
+        const roiCtx = document.getElementById("roiChart");
+        if (roiCtx) {
+          new Chart(roiCtx.getContext("2d"), {
+            type: "bar",
+            data: {
+              labels: [
+                "Residential",
+                "Commercial",
+                "Mixed-Use",
+                "Industrial",
+                "Adaptive Reuse",
+              ],
+              datasets: [
+                {
+                  label: "Average ROI (%)",
+                  data: [18.5, 17, 20, 16.5, 19],
+                  backgroundColor: [
+                    "rgba(99, 102, 241, 0.7)",
+                    "rgba(249, 115, 22, 0.7)",
+                    "rgba(236, 72, 153, 0.7)",
+                    "rgba(59, 130, 246, 0.7)",
+                    "rgba(34, 197, 94, 0.7)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: { color: "rgba(51, 65, 85, 0.5)" },
+                },
+                x: { grid: { display: false } },
+              },
+              plugins: { legend: { display: false } },
+            },
+          });
+        }
+
+        // Portfolio Chart (Doughnut)
+        const portfolioCtx = document.getElementById("portfolioChart");
+        if (portfolioCtx) {
+          new Chart(portfolioCtx.getContext("2d"), {
+            type: "doughnut",
+            data: {
+              labels: [
+                "Residential",
+                "Commercial",
+                "Mixed-Use",
+                "Industrial",
+                "Adaptive Reuse",
+              ],
+              datasets: [
+                {
+                  data: [35, 25, 20, 10, 10],
+                  backgroundColor: [
+                    "rgba(99, 102, 241, 0.8)",
+                    "rgba(249, 115, 22, 0.8)",
+                    "rgba(236, 72, 153, 0.8)",
+                    "rgba(59, 130, 246, 0.8)",
+                    "rgba(34, 197, 94, 0.8)",
+                  ],
+                  hoverOffset: 4,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { position: "bottom" },
+              },
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

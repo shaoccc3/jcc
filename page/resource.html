@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources - Rebirth Cities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366F1",
+              secondary: "#F97316",
+              dark: "#0F172A",
+              light: "#F8FAFC",
+              accent: "#EC4899",
+              neutral: "#334155",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              montserrat: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-glass {
+          background: rgba(15, 23, 42, 0.8);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+        .card-hover {
+          transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-padding {
+          padding: clamp(4rem, 10vw, 8rem) 1rem;
+        }
+        .hero-gradient {
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-dark text-light overflow-x-hidden">
+    <header
+      id="navbar"
+      class="sticky w-full top-0 z-50 transition-all duration-300 bg-glass border-b border-white/10"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3"
+              ><span class="text-secondary text-2xl"
+                ><i class="fa fa-building-o"></i></span
+              ><span class="font-montserrat font-bold text-xl md:text-2xl"
+                >Rebirth Cities</span
+              ></a
+            >
+          </div>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html#mission"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Our Mission</a
+            >
+            <a
+              href="index.html#projects"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Projects</a
+            >
+            <a
+              href="projects.html"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Case Studies</a
+            >
+            <a
+              href="resource.html"
+              class="text-secondary transition-colors font-semibold"
+              >Resources</a
+            >
+            <a
+              href="index.html#apply"
+              class="text-light/80 hover:text-secondary transition-colors"
+              >Apply Now</a
+            >
+          </nav>
+          <button
+            id="menu-toggle"
+            class="md:hidden text-light focus:outline-none"
+          >
+            <i class="fa fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-dark/95 backdrop-blur-md"
+      >
+        <nav class="flex flex-col px-4 pt-2 pb-4 space-y-2">
+          <a
+            href="index.html#mission"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Our Mission</a
+          >
+          <a
+            href="index.html#projects"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Projects</a
+          >
+          <a
+            href="projects.html"
+            class="text-light/80 hover:text-secondary transition-colors py-2"
+            >Case Studies</a
+          >
+          <a
+            href="resource.html"
+            class="text-secondary transition-colors font-semibold py-2"
+            >Resources</a
+          >
+          <a
+            href="index.html#apply"
+            class="bg-primary hover:bg-primary/90 text-white mt-2 px-5 py-3 rounded-full text-center transition-all"
+            >Apply Now</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-gradient pt-32 pb-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-secondary font-medium">Knowledge Hub</span>
+          <h1
+            class="font-montserrat font-bold text-white text-[clamp(2.5rem,6vw,4rem)] mt-2 mb-6"
+          >
+            Urban Regeneration Resources
+          </h1>
+          <p class="text-light/70 text-lg max-w-3xl mx-auto">
+            From case studies and in-depth reports to practical toolkits, get
+            everything you need to support your urban regeneration journey.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-padding bg-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          >
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl p-6 text-center card-hover hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa fa-book text-primary text-2xl"></i>
+              </div>
+              <h3 class="font-montserrat font-semibold text-xl">
+                Case Studies
+              </h3>
+              <p class="text-light/70 text-sm mt-2">
+                Real-world examples of successful urban regeneration projects.
+              </p>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl p-6 text-center card-hover hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa fa-file-text-o text-primary text-2xl"></i>
+              </div>
+              <h3 class="font-montserrat font-semibold text-xl">
+                Research Papers
+              </h3>
+              <p class="text-light/70 text-sm mt-2">
+                Academic research and white papers on urban transformation.
+              </p>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl p-6 text-center card-hover hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa fa-wrench text-primary text-2xl"></i>
+              </div>
+              <h3 class="font-montserrat font-semibold text-xl">Toolkits</h3>
+              <p class="text-light/70 text-sm mt-2">
+                Practical toolkits for urban planners and decision-makers.
+              </p>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl p-6 text-center card-hover hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa fa-play-circle-o text-primary text-2xl"></i>
+              </div>
+              <h3 class="font-montserrat font-semibold text-xl">Webinars</h3>
+              <p class="text-light/70 text-sm mt-2">
+                Recorded sessions with urban experts and thought leaders.
+              </p>
+            </div>
+          </div>
+
+          <h2 class="font-montserrat font-bold text-3xl mb-8">
+            Latest Resources
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover p-6"
+            >
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="text-xs text-primary font-medium bg-primary/10 px-3 py-1 rounded-full"
+                  >Case Study</span
+                ><span class="text-xs text-light/60">June 12, 2025</span>
+              </div>
+              <h3 class="font-montserrat font-bold text-xl mb-3">
+                The Revival of Detroit's Cultural Center
+              </h3>
+              <p class="text-light/70 mb-4 h-24">
+                How local government, businesses, and community groups
+                collaborated to transform Detroit's cultural district into a
+                vibrant hub.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >Read Case <i class="fa fa-arrow-right ml-2 text-sm"></i
+              ></a>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover p-6"
+            >
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="text-xs text-secondary font-medium bg-secondary/10 px-3 py-1 rounded-full"
+                  >Research Paper</span
+                ><span class="text-xs text-light/60">May 28, 2025</span>
+              </div>
+              <h3 class="font-montserrat font-bold text-xl mb-3">
+                AI-Powered Urban Planning: A New Paradigm
+              </h3>
+              <p class="text-light/70 mb-4 h-24">
+                Exploring how artificial intelligence is revolutionizing the
+                urban planning process and enabling more inclusive and
+                sustainable cities.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >Download Paper <i class="fa fa-download ml-2 text-sm"></i
+              ></a>
+            </div>
+            <div
+              class="bg-dark/50 border border-white/10 rounded-xl overflow-hidden card-hover p-6"
+            >
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="text-xs text-accent font-medium bg-accent/10 px-3 py-1 rounded-full"
+                  >Toolkit</span
+                ><span class="text-xs text-light/60">April 15, 2025</span>
+              </div>
+              <h3 class="font-montserrat font-bold text-xl mb-3">
+                Community Engagement Framework
+              </h3>
+              <p class="text-light/70 mb-4 h-24">
+                A practical guide to designing and implementing effective
+                community engagement strategies for urban regeneration projects.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >Download Toolkit <i class="fa fa-download ml-2 text-sm"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1E293B] border-t border-white/10 py-12">
+      <div class="container mx-auto px-4 text-center text-light/60 text-sm">
+        <p>&copy; 2025 Rebirth Cities. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", () =>
+          document.getElementById("mobile-menu").classList.toggle("hidden")
+        );
+    </script>
+  </body>
+</html>
