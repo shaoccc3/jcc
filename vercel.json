@@ -3,11 +3,11 @@
   "routes": [
     {
       "src": "/projects",
-      "dest": "/page/projects.html"
+      "dest": "projects.html"
     },
     {
       "src": "/resource",
-      "dest": "/page/resource.html"
+      "dest": "resource.html"
     },
     {
       "src": "/(.*)",
