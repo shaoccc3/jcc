@@ -2,12 +2,12 @@
   "version": 2,
   "routes": [
     {
-      "source": "/projects",
-      "destination": "/page/projects.html"
+      "src": "/projects",
+      "dest": "/page/projects.html"
     },
     {
-      "source": "/resource",
-      "destination": "/page/resource.html"
+      "src": "/resource",
+      "dest": "/page/resource.html"
     },
     {
       "src": "/(.*)",
